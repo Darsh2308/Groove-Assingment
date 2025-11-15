@@ -1,6 +1,6 @@
 import { Message } from "../components/ChatMessage";
 
-const GROQ_API_KEY = "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";
+const GROQ_API_KEY: string = "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";
 const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
 const GROQ_MODEL = "llama-3.3-70b-versatile";
 
@@ -30,7 +30,7 @@ interface GroqResponse {
 }
 
 function isApiKeyConfigured(): boolean {
-  return GROQ_API_KEY !== "YOUR_GROQ_API_KEY_HERE" && GROQ_API_KEY.length > 0;
+  return GROQ_API_KEY !== "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" && GROQ_API_KEY.length > 0;
 }
 
 export async function sendToGemini(messages: Message[]): Promise<string> {
